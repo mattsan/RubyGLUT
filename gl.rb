@@ -1,0 +1,30 @@
+require 'fiddle/import'
+
+module GL
+  extend Fiddle::Importer
+  dlload '/System/Library/Frameworks/OpenGL.framework/OpenGL'
+
+  extern 'void glBegin (unsigned int mode)'
+  extern 'void glClear (unsigned int mask)'
+  extern 'void glClearAccum (float red, float green, float blue, float alpha)'
+  extern 'void glClearColor (float red, float green, float blue, float alpha)'
+  extern 'void glClearDepth (double depth)'
+  extern 'void glClearIndex (float c)'
+  extern 'void glClearStencil (int s)'
+  extern 'void glColor3d (double red, double green, double blue)'
+  extern 'void glColor3dv (const double *v)'
+  extern 'void glEnd (void)'
+  extern 'void glEndList (void)'
+  extern 'void glFlush (void)'
+  extern 'void glLoadIdentity (void)'
+  extern 'void glOrtho (double left, double right, double bottom, double top, double zNear, double zFar)'
+  extern 'void glPopMatrix (void)'
+  extern 'void glPushMatrix (void)'
+  extern 'void glScalef (float x, float y, float z)'
+  extern 'void glTranslatef (float x, float y, float z)'
+  extern 'void glVertex2i (int x, int y)'
+  extern 'void glVertex2iv (const int *v)'
+  extern 'void glViewport (int x, int y, int width, int height)'
+  extern 'void glBeginQuery (unsigned int target, unsigned int id)'
+  extern 'void glEndQuery (unsigned int target)'
+end
